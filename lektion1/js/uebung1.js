@@ -6,12 +6,12 @@
  * 1) Eine Variable land erstellen
  */
 //ToDo: füge ab hier Deinen Code ein
-let country = "Spanien"
+let land = "Spanien"
 
-function aufgabe2(land) {
+function aufgabe2() {
 
     console.debug("Aufgabe 2 ==========================")
-    console.debug(country)
+    console.debug(land)
 }
 
 /**
