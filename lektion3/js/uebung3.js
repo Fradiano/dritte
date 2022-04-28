@@ -9,8 +9,14 @@ function aufgabe1() {
   console.debug("Aufgabe 1 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
-
+let pizza = {
+  art: "hollondaise",
+  belag: ["Hähnchenbrust", "käse", "tomtate", "oregano"],
+  skala: "10",
+  esseIchSieGerne: true,
+}
   console.debug(pizza)
+  console.debug(Object.keys(pizza))
 }
 
 /**
@@ -26,9 +32,9 @@ function aufgabe2() {
   }
 
   //ToDo: füge ab hier in den debugs Deinen Code ein
-  console.debug()
-  console.debug()
-  console.debug()
+  console.debug(Object.keys(ghibli))
+  console.debug(Object.values(ghibli))
+  console.debug(Object.entries(ghibli))
 }
 
 /**
@@ -38,7 +44,13 @@ function aufgabe3() {
   console.debug("Aufgabe 3 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
+let kuenstler = {
+  name: "David Guetta",
+  alter: 54,
+  job: ["DJ", "producer"],
+  genre: "house/edm",
 
+}
   for (let key of Object.keys(kuenstler)) {
     console.debug(key + ": " + kuenstler[key])
   }
