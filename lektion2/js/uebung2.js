@@ -22,7 +22,7 @@ function aufgabe2() {
   let helden = ["Spider-Man", "Thor", "IronMan"]
   let newheld = helden.push("Captain Marvel")
   //ToDo: füge ab hier Deinen Code in der console.debug ein
-  console.debug("laenge des Karis", helden.length)
+  console.debug("anzahl der helden", helden.length)
 }
 
 /**
