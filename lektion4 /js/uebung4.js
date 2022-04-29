@@ -11,6 +11,10 @@ function aufgabe1() {
   let ampel = "gruen";
 
   //ToDo: füge ab hier deinen Code ein
+if (ampel == "gruen") {
+  console.debug("Du darfst fahren")
+
+}
 
 }
 
@@ -23,7 +27,10 @@ function aufgabe2() {
   let ampel = "rot";
 
   //ToDo: füge ab hier deinen Code ein
+if (ampel !="gruen")
+  console.debug("Du musst halten")
 }
+
 
 /**
  * 3) Bastel deine if-else Ampel!

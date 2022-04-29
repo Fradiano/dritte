@@ -44,16 +44,14 @@ function aufgabe3() {
   console.debug("Aufgabe 3 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
-let kuenstler = {
-  name: "David Guetta",
-  alter: 54,
-  job: ["DJ", "producer"],
-  genre: "house/edm",
+  let kuenstler = {
+    name: "David Guetta",
+    alter: 54,
+    job: ["DJ", "producer"],
+    genre: "house/edm",
 
-}
-  for (let key of Object.keys(kuenstler)) {
-    console.debug(key + ": " + kuenstler[key])
   }
+  console.debug(kuenstler)
 }
 
 /**
