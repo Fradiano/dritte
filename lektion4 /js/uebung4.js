@@ -27,8 +27,11 @@ function aufgabe2() {
   let ampel = "rot";
 
   //ToDo: füge ab hier deinen Code ein
-if (ampel !="gruen")
+if (ampel !="gruen") {
+
+
   console.debug("Du musst halten")
+}
 }
 
 
@@ -38,9 +41,33 @@ if (ampel !="gruen")
 function aufgabe3() {
   console.debug("Aufgabe 3 ==========================");
 
-  let ampel = "gruen";
+  let ampel = "grün";
 
-  //ToDo: füge ab hier Deinen Code ein
+  if (ampel == "grün") {
+    console.debug("Du darfst fahren")
+  }
+  else if(ampel =="rot"){
+    console.debug("Du musst halten!")
+  }
+  else if (ampel == "gelb"){
+    console.debug("achtung")
+  }
+
+  switch (ampel) {
+
+    case "grün":
+      console.debug("du darfst fahren")
+      break
+    case "rot":
+      console.debug("du musst stehen bleiben!")
+      break
+    case "gelb":
+      console.debug("warte noch")
+      break
+    default:
+      console.debug("achte auf verkehrs zeichen")
+  }
+
 }
 
 /**
