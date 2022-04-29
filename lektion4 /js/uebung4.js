@@ -79,7 +79,36 @@ function aufgabe4() {
   let tag = 5;
 
   //ToDo: füge ab hier Deinen Code ein
+  switch (tag) {
+    case 1:
+      console.debug("heute ist Montag")
+      break
+    case 2:
+      console.debug("heute ist dienstag")
+      break
+    case 3:
+      console.debug("heute ist mittwoch")
+      break
+    case 4:
+      console.debug("heute ist donnerstag")
+      break
+    case 5:
+      console.debug("heute ist freitag")
+      break
+    case 7:
+      console.debug("heute ist samstag")
+      break
+    case 8:
+      console.debug("heute ist sonntag")
+  }
+
+
+
+
+
+
 }
+
 
 /**
  * Hauptfunktion, in der die Aufgaben aufgerufen werden
