@@ -43,6 +43,7 @@ function aufgabe3() {
     }
 
     console.debug("Hallo Nummer: " + i)
+
   }
 }
 
@@ -53,6 +54,14 @@ function aufgabe4() {
   console.debug("Aufgabe 4 ==========================")
 
   //ToDo: füge ab hier Deinen Code ein
+  for (i=1;i<=3;i++) {
+    console.debug("Eerste Schleife" +i)
+    for (j=1;j<=2;j++){
+      console.debug ("Zweite Schleife" +j)
+    }
+
+  }
+
 }
 
 /**
