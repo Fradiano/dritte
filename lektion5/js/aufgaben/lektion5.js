@@ -6,7 +6,12 @@
  * 1) Schreibe ein Array `artikelListe`, fülle es und geb es auf der Konsole mithilfe einer Schleife aus
  */
 function artikelAuflisten() {
-    // ToDo: füge ab hier deinen Code ein
+  // ToDo: füge ab hier deinen Code ein
+  let artikeliste = ["Brokkoli", "Reis", "Streukäse"]
+
+  for (let artikel of artikeliste) {
+    console.debug(artikel)
+  }
 
 }
 
@@ -15,9 +20,18 @@ function artikelAuflisten() {
  * gebe sie auf der Konsole aus
  */
 function allesAuflisten() {
-    let gruppenListe = []
+  let gruppenListe = []
 
 // ToDo: füge ab hier deinen Code ein
+  let gemuese = ["brokkoli", "zwiebeln", "salat"]
+    let getreideliste = ["reis", "nudeln", "quinoa"]
+    let milchliste = ["Streukäse", "sahne", "joghurt"]
+
+gruppenListe.push (gemuese, getreideliste, milchliste)
+  for ( let gruppe of gruppenListe) {
+    console.debug(gruppe)
+  }
+
 }
 
 /**
@@ -25,7 +39,7 @@ function allesAuflisten() {
  * auf der Konsole aus
  */
 function artikelEntfernen() {
-    // ToDo: füge ab hier deinen Code ein
+  // ToDo: füge ab hier deinen Code ein
 
 }
 
@@ -33,9 +47,9 @@ function artikelEntfernen() {
  * 4) Schreibe die Sortieren-Funktion
  */
 function sortieren() {
-    // ToDo: füge ab hier deinen Code ein
+  // ToDo: füge ab hier deinen Code ein
 }
 
 export {
-    artikelAuflisten, allesAuflisten, artikelEntfernen, sortieren
+  artikelAuflisten, allesAuflisten, artikelEntfernen, sortieren
 }
