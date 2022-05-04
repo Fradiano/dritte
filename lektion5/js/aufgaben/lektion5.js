@@ -32,6 +32,10 @@ gruppenListe.push (gemuese, getreideliste, milchliste)
     console.debug(gruppe)
   }
 
+  for (let i = 0; i < gruppenListe.length; i++){
+    console.debug("gruppe", i,gruppenListe[i])
+  }
+
 }
 
 /**
