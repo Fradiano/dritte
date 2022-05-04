@@ -86,8 +86,9 @@ function aufgabe6() {
  let i = 1
   do {
     i++
+    console.debug (i)
   } while (i<5)
-  console.debug (i)
+
 }
 
 /**
@@ -100,9 +101,11 @@ function aufgabe7() {
   do {
 
     i++
+    console.debug("warum kommt da jetzt", i, "und nicht 1???")
+
   }
   while(i<0)
-  console.debug("warum kommt da jetzt", i, "und nicht 1???")
+
 }
 
 /**
