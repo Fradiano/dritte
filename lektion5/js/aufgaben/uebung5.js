@@ -54,12 +54,12 @@ function aufgabe4() {
   console.debug("Aufgabe 4 ==========================")
 
   //ToDo: füge ab hier Deinen Code ein
-  for (i=1;i<=3;i++) {
-    console.debug("Eerste Schleife" +i)
-    for (j=1;j<=2;j++){
-      console.debug ("Zweite Schleife" +j)
-    }
+  for (let i = 1; i <= 3; i++) {
 
+    for (let j = 1; j <= 2; j++){
+      console.debug ("Zweite Schleife j:" +j)
+    }
+console.debug("Erste Schleife i:" +i)
   }
 
 }
@@ -72,6 +72,8 @@ function aufgabe5() {
 
   let i=1
   //ToDo: füge ab hier Deinen Code ein
+  while (i <5)
+  console.debug(i++)
 }
 
 /**
@@ -81,6 +83,11 @@ function aufgabe6() {
   console.debug("Aufgabe 6 ==========================");
 
   //ToDo: füge ab hier Deinen Code ein
+ let i = 1
+  do {
+    i++
+  } while (i<5)
+  console.debug (i)
 }
 
 /**
@@ -91,10 +98,11 @@ function aufgabe7() {
 
   let i=1
   do {
-    console.debug(i)
+
     i++
   }
   while(i<0)
+  console.debug("warum kommt da jetzt", i, "und nicht 1???")
 }
 
 /**
