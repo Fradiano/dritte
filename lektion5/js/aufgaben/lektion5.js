@@ -14,7 +14,6 @@ function artikelAuflisten() {
   }
 
 }
-
 /**
  * 2) Erstelle die Arrays `milchListe`, `gemüseListe` und `getreideListe`, fülle diese, füge sie der gruppenListe hinzu und
  * gebe sie auf der Konsole aus
@@ -31,14 +30,10 @@ gruppenListe.push (gemuese, getreideliste, milchliste)
   for ( let gruppe of gruppenListe) {
     console.debug(gruppe)
   }
-
-
   for (let i = 0; i < gruppenListe.length; i++){
     console.debug("gruppe", i,gruppenListe[i])
   }
-
 }
-
 /**
  * 3) Erstelle ein befülltes Array `gemueseListe`, entferne diese Elemente aus dem Array und gebe es vor und nach dem Entfernen
  * auf der Konsole aus
@@ -52,23 +47,33 @@ function artikelEntfernen() {
   for (let i = gemueseListe.length;i>0;--i){
     gemueseListe.splice(0, 1)
   }
-
-
   console.debug(gruppenListe)
-
 }
-
-
 /**
  * 4) Schreibe die Sortieren-Funktion
  */
 function sortieren() {
   // ToDo: füge ab hier deinen Code ein
-  let gemueseListe = ["brokkoli", "Zwiebeln", "salat"]
-  for (let i = gemueseListe.length; i<0; --i){
-    console.debug(gemueseListe)
+
+  let gruppenListe = []
+
+  let gemuese = ["brokkoli", "zwiebeln", "salat"]
+  let getreideliste = ["reis", "nudeln", "quinoa"]
+  let milchliste = ["Streukäse", "sahne", "joghurt"]
+
+  gruppenListe.push (gemuese, getreideliste, milchliste)
+  for ( let gruppe of gruppenListe){
+    console.debug(gruppe)
   }
-  console.debug("gruppen Liste danach" gruppenListe.sort)
+  console.debug("sortiert")
+  for ( let gruppe of gruppenListe){
+    gruppe.sort()
+
+  }
+gruppenListe.sort()
+
+console.debug(gruppenListe)
+
 }
 
 export {
