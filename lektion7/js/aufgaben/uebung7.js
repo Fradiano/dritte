@@ -9,14 +9,14 @@ function aufgabe1() {
   console.debug("Aufgabe 1 ==========================")
 
   class Apfel {
-    constructor (farbe) {
+    constructor(farbe) {
       this.farbe = farbe
     }
 
   }
 
   //ToDo: füge ab hier deinen Code ein
-
+  let apfel = new Apfel("rot")
   console.debug(apfel.farbe)
 }
 
@@ -27,11 +27,14 @@ function aufgabe2() {
   console.debug("Aufgabe 2 ==========================")
 
   class Auto {
-    constructor (farbe) {
+    constructor(farbe) {
       this.farbe = farbe
     }
 
     //ToDo: füge ab hier deinen Code ein
+    hupen (){
+      console.debug("honk honk")
+    }
   }
 
   let bmw = new Auto("rot")
@@ -46,7 +49,7 @@ function aufgabe3() {
   console.debug("Aufgabe 3 ==========================");
 
   class Pkw {
-    constructor (farbe) {
+    constructor(farbe) {
       this.farbe = farbe
     }
 
@@ -58,7 +61,10 @@ function aufgabe3() {
   let mini = new Pkw("blau")
 
   //ToDo: füge ab hier deinen Code ein
+  console.debug(mini.farbe)
+  mini.hupen()
 }
+
 
 /**
  * 4) Schreibe den Konstruktor
@@ -95,10 +101,11 @@ function aufgabe5() {
  * Hauptfunktion, in der die Aufgaben aufgerufen werden
  */
 function main() {
-  aufgabe1()
-  aufgabe2()
+  //aufgabe1()
+  //aufgabe2()
   aufgabe3()
-  aufgabe4()
-  aufgabe5()
+  //ufgabe4()
+  //aufgabe5()
 }
+
 main()
