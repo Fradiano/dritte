@@ -3,11 +3,17 @@ class Artikel {
   id = gruppe.counter++
   index
   name
+  gekauft
   artikelListe = []
 
-  constructor(name, index) {
+  constructor(index, name) {
     this.name = name
     this.index = index
+    this.id = Artikel.counter++
+    this.gekauft = false
   }
 
 }
+
+export {Artikel}
+
