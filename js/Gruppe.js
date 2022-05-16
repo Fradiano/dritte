@@ -1,7 +1,7 @@
 import {Artikel} from './Artikel.js'
 
 
-//import {Shopping} from './Shopping.js'
+import {Shopping} from './Shopping.js'
 
 
 class Gruppe {
@@ -21,12 +21,11 @@ class Gruppe {
 
   artikelAuflisten(gekauft) {
     for (let artikel of this.artikelListe)
-      if (artikel.gekauft == true)
-        return artikel
-
+      if (artikel.gekauft == gekauft)
 
           console.debug(`${artikel.name}`)
   }
+
 }
 
 
