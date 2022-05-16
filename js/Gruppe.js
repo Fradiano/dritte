@@ -1,38 +1,33 @@
-import {Artikel} from './Artikel'
-import {Shopping} from './Shopping'
+import {Artikel} from './Artikel.js'
+
+
+//import {Shopping} from './Shopping.js'
 
 
 class Gruppe {
 
   static counter = 1
-  id = ++
+  id
   name
   index
-  artikel
-  artikelliste = ["saft", "wasser", "cola"]
+  artikelListe = []
 
-  function.artikelAuflisten (gekauft) {
-  for (gekauft of artikelliste)
-    if (artikel.gekauft == true)
-      return artikelListe
+  constructor(name, index) {
+    this.id = Gruppe.counter++
+    this.index = index
+    this.name = name
+
+  }
+
+  artikelAuflisten(gekauft) {
+    for (let artikel of this.artikelListe)
+      if (artikel.gekauft == true)
+        return artikel
 
 
-}
-`${artikel.name}`
-
-
-
-
-constructor(id,name, index, artikel, artikelliste, id) {
-    id = this.counter ++
-
+          console.debug(`${artikel.name}`)
   }
 }
 
-class Shopping {
-  gruppenListe
-  aktiveGruppe
-  
-}
 
 export {Gruppe}

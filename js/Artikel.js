@@ -1,16 +1,16 @@
 class Artikel {
   static counter = 1
-  id = gruppe.counter++
+  id
   index
   name
-  gekauft
-  artikelListe = []
+  gekauft = false
 
-  constructor(index, name) {
+
+  constructor(name, index) {
     this.name = name
     this.index = index
     this.id = Artikel.counter++
-    this.gekauft = false
+
   }
 
 }
