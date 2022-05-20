@@ -9,18 +9,11 @@ class GruppenTag extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <dt>Obst & Gemüse
-          <i className="material-icons">expand_less</i>
-        </dt>
-        <ArtikelTag name="Käse"/>
-        <dt>Getreideprodukte
-          <i className="material-icons">expand_less</i>
-        </dt>
-        <ArtikelTag name="Brot"/>
-        <dt>Milchprodukte
-          <i className="material-icons">expand_less</i>
-        </dt>
-        <ArtikelTag name="Senf"/>
+        {/* ToDo: füge hier drunter Deinen HTML-Code ein */}
+        Füge hier Deinen GruppenTag-Code ein<br/>
+        <ArtikelTag/>
+        <ArtikelTag/>
+        <ArtikelTag/>
       </React.Fragment>
     )
   }
