@@ -6,14 +6,36 @@ class GruppenTag extends React.Component {
     super(props)
   }
 
+  artikelEntfernen(name) {
+    // ToDo: implementiere diese Methode
+  }
+
   render() {
+    const gruppe = this.props.gruppe
+
+    let gruppenHeader = ""
+    if (this.props.gekauft == false) {
+      gruppenHeader = (
+        <dt className={this.props.aktiv ? "aktiv" : "inaktiv"}
+            onClick={() => this.props.aktiveGruppeHandler(gruppe)}>
+          <span>{gruppe.name}</span>
+          <i className="material-icons">expand_less</i>
+        </dt>)
+    }
+
+    let artikelArray = []
+    for (const artikel of gruppe.artikelListe) {
+      if (artikel.gekauft == this.props.gekauft) {
+        artikelArray.push(
+          <ArtikelTag artikel={artikel} key={artikel.id}
+                      checkHandler={this.props.checkHandler}
+                      deleteHandler={() => this.artikelEntfernen(artikel.name)}/>)
+      }
+    }
     return (
       <React.Fragment>
-        {/* ToDo: füge hier drunter Deinen HTML-Code ein */}
-        Füge hier Deinen GruppenTag-Code ein<br/>
-        <ArtikelTag/>
-        <ArtikelTag/>
-        <ArtikelTag/>
+        {gruppenHeader}
+        {artikelArray}
       </React.Fragment>
     )
   }
