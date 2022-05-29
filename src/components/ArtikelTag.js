@@ -11,6 +11,26 @@ class ArtikelTag extends React.Component {
     }
   }
 
+  /**
+   * Reagiert auf Änderungen im Eingabefeld und speichert den neuen Wert im newName-state
+   * @param {Event.CHANGE} event - das Change-Event im Eingabefeld
+   */
+  handleChange(event) {
+    this.setState({newName: event.target.value})
+  }
+
+  /**
+   * Benennt einen Artikel um
+   * @param {Artikel} artikel - der umzubenennende Artikel
+   * @param {Event.KEYPRESS} event -
+   */
+  artikelUmbenennen(artikel, event) {
+    if (event && event.key != "Enter") return
+    // ToDo: Modell.aktuelleGruppe.artikelUmbenennen() verwenden
+    artikel.name = this.state.newName
+    this.setState({isEditing: false})
+  }
+
   render() {
     const artikel = this.props.artikel
     let artikelName = artikel.name
@@ -25,7 +45,7 @@ class ArtikelTag extends React.Component {
         <label>
           <input type="checkbox" checked={artikel.gekauft}
                  onChange={() => this.props.checkHandler(artikel)}/>
-          test
+          {artikelName}
         </label>
         {!artikel.gekauft ?
           <i className="material-icons"
@@ -51,9 +71,7 @@ class ArtikelTag extends React.Component {
 
 
     return (
-      <React.Fragment>
-        <dd><label><input type="checkbox"/> {this.props.name}</label></dd>
-      </React.Fragment>
+      this.state.isEditing ? editTemplate : viewTemplate
     )
   }
 }

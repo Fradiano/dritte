@@ -7,6 +7,8 @@ class GruppenTag extends React.Component {
   }
 
   artikelEntfernen(name) {
+    this.props.gruppe.artikelEntfernen(name)
+    this.props.aktiveGruppeHandler(this.props.gruppe)
     // ToDo: implementiere diese Methode
   }
 

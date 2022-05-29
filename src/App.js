@@ -48,10 +48,18 @@ class App extends React.Component {
     const aktion = artikel.gekauft ? "erledigt" : "reaktiviert"
     // App.informieren mit 'aktion'
     Modell.informieren(`[App]Artikel"${artikel.name}` )
+    this.setState(this.state)
     // 'state' aktualisieren
   }
 
   artikelHinzufuegen() {
+    let eingabe = document.getElementById("artikelEingabe")
+    if (eingabe.value.length > 0){
+      Modell.aktiveGruppe.artikelHinzufuegen(eingabe.value)
+      this.setState(this.state)
+    }
+    eingabe.value = ""
+    eingabe.focus()
     // ToDo: implementiere diese Methode
   }
 
