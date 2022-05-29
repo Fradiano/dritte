@@ -3,11 +3,18 @@ import React from 'react'
 class ArtikelTag extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      // schaltet den Edit-Mode um
+      isEditing: false,
+      // enthält den neuen Namen im Edit-Mode
+      newName: this.props.artikel.name
+    }
   }
 
   render() {
     const artikel = this.props.artikel
     let artikelName = artikel.name
+    console.log(artikelName)
     if (artikel.gekauft) {
       artikelName = <s>{artikel.name}</s>
     }
@@ -18,7 +25,7 @@ class ArtikelTag extends React.Component {
         <label>
           <input type="checkbox" checked={artikel.gekauft}
                  onChange={() => this.props.checkHandler(artikel)}/>
-          {artikelName}
+          test
         </label>
         {!artikel.gekauft ?
           <i className="material-icons"

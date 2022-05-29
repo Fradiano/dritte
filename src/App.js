@@ -43,8 +43,11 @@ class App extends React.Component {
   // ToDo: diese Methode als 'checkHandler' an GruppenTag und ArtikelTag durchreichen
   artikelChecken = (artikel) => {
     // artikel.gekauft 'umpolen'
+    artikel.gekauft = !artikel.gekauft
     // 'aktion' abhängig von 'artikel.gekauft' auf "erledigt" oder "reaktiviert" setzen
+    const aktion = artikel.gekauft ? "erledigt" : "reaktiviert"
     // App.informieren mit 'aktion'
+    Modell.informieren(`[App]Artikel"${artikel.name}` )
     // 'state' aktualisieren
   }
 
