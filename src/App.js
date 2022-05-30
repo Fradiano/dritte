@@ -1,5 +1,6 @@
 import React from 'react'
 import GruppenTag from './components/GruppenTag'
+import GruppenDialog from './components/GruppenDialog'
 import Modell from './model/Shopping'
 
 
@@ -40,27 +41,24 @@ class App extends React.Component {
     this.setState({erledigtAufgeklappt: !this.state.erledigtAufgeklappt})
   }
 
-  // ToDo: diese Methode als 'checkHandler' an GruppenTag und ArtikelTag durchreichen
   artikelChecken = (artikel) => {
+    // ToDo: implementiere diese Methode
     // artikel.gekauft 'umpolen'
-    artikel.gekauft = !artikel.gekauft
     // 'aktion' abhängig von 'artikel.gekauft' auf "erledigt" oder "reaktiviert" setzen
-    const aktion = artikel.gekauft ? "erledigt" : "reaktiviert"
     // App.informieren mit 'aktion'
-    Modell.informieren(`[App]Artikel"${artikel.name}` )
-    this.setState(this.state)
     // 'state' aktualisieren
   }
 
   artikelHinzufuegen() {
-    let eingabe = document.getElementById("artikelEingabe")
-    if (eingabe.value.length > 0){
-      Modell.aktiveGruppe.artikelHinzufuegen(eingabe.value)
+    // ToDo: implementiere diese Methode
+    const eingabe = document.getElementById("artikelEingabe")
+    const artikelName = eingabe.value.trim()
+    if (artikelName.length > 0) {
+      Modell.aktiveGruppe.artikelHinzufuegen(artikelName)
       this.setState(this.state)
     }
     eingabe.value = ""
     eingabe.focus()
-    // ToDo: implementiere diese Methode
   }
 
   setAktiveGruppe(gruppe) {
@@ -94,6 +92,13 @@ class App extends React.Component {
           aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}
           checkHandler={this.artikelChecken}/>)
       }
+    }
+
+    let gruppenDialog = ""
+    if (this.state.showGruppenDialog) {
+      gruppenDialog = <GruppenDialog
+        gruppenListe={Modell.gruppenListe}
+        onDialogClose={() => this.setState({showGruppenDialog: false})}/>
     }
 
     return (
@@ -154,6 +159,8 @@ class App extends React.Component {
             <span className="mdc-button__ripple"></span> Setup
           </button>
         </footer>
+
+        {gruppenDialog}
       </div>
     )
   }
