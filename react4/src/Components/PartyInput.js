@@ -16,6 +16,8 @@ class PartyInput extends React.Component{
          * ToDo: Führe die Funktion handleInput() aus, welche über die Props in diese Klasse übergeben wurde.
          *  Benutze als Argument das input-Attribut des States (wie in Zeile 8 gespeichert).
          */
+        this.state.input
+
     }
 
     onChange(event){
