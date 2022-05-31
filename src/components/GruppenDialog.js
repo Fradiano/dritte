@@ -11,11 +11,21 @@ class GruppenDialog extends React.Component {
   }
 
   gruppeHinzufuegen() {
+    let eingabe = document.getElementById("eingabe")
+    let gruppeName = eingabe.value.trim()
+    if (let gruppeName < 0)
+    {
+      Modell.gruppeHinzugügen(gruppeName)
+      this.state.gruppenListe
+    }
+    eingabe.focus()
     // ToDo: implementieren
   }
 
   gruppeEntfernen(name) {
     // ToDo: implementieren
+    Modell.gruppeEntfernen(name)
+    this.setState.gruppenListe
   }
 
   render() {
