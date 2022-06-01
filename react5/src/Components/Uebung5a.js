@@ -65,12 +65,17 @@ function GastGruss2(props) {
   return <h1>Bitte registrieren Sie sich.</h1>;
 }
 
-function Gruesse2(props) {
-   <NutzerGruessung isLoggedIn = {true}
-   else GastGruss2></NutzerGruessung>
+function Gruesse2(props){
+
 
   const isLoggedIn = props.isLoggedIn;
   //ToDo: Schreibe hier deinen Code!
+if (isLoggedIn == true) {
+  return <NutzerGruss2/>
+} else {return <GastGruss2/>
+}
+
+
 
 }
 
@@ -99,6 +104,7 @@ export default LoginControl
 /**
  * 3) Benutze hier den && Operator.
  */
+
 export function Mailbox(props) {
   const ungeleseneNachrichten = props.ungeleseneNachrichten;
   return (
@@ -106,6 +112,7 @@ export function Mailbox(props) {
 
         <h1>Willkommen zu deiner Mailbox!</h1>
         {//ToDo: Hier die Bedingung und den Operator einfügen
+          ungeleseneNachrichten.length > 0 &&
             <h2>
               Du hast {ungeleseneNachrichten.length} ungelesene Nachrichten.
             </h2>
@@ -126,14 +133,15 @@ export class NutzerGruessung extends React.Component {
     super(props);
 
     this.state = {
-      isLoggedIn: true
-    }
+      isLoggedIn: true,
+      isAdmin: true
+
   }
 
   //ToDo: Schreibe hier deinen Code statt des Rückgabewerts null!
     render(){
-      return null
-    }
+    return this.state.isLoggedIn ? (<div>Wilkommen zurück<div/>) : (<div>Bitte registrieren</div>)
+      }
 }
 
 
